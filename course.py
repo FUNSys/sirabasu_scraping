@@ -132,7 +132,7 @@ class Course(object):
 				self._semesta = self._extra[i]
 			elif i == 6:
 				self._unitnum = self._extra[i]
-			elif i > 6:
+			elif i > 6 and self._extra[i].find('1．講義内容と目的') == -1:
 				self._teachers += self._extra[i]
 
 	def print_all(self):
